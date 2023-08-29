@@ -4,3 +4,104 @@
 #header{
     color: white;
 }
+.erro{
+    color: red;
+    text-align: center;
+}
+.sucesso{
+    color: green;
+    font-weight: bold;
+    text-align: center;
+}
+img{
+    width: 240px;
+    height: 140px;
+}
+
+#titulo-principal{
+    color: #1d7044;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 2.5rem;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(245, 226, 239);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+#container{
+    background-color: #cdeec7;
+    width: 85%;
+    margin-top: 2.5rem;
+    margin-bottom: 5rem;
+    height: 30rem;
+    box-shadow: 5px 10px 15px #1d7044;
+    
+}
+#input-container{
+    margin-left: 100px;
+    width: 85%;
+}
+
+.button {
+    background-color: #1d7044;
+    color: white;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+label{
+    color:#1d7044;
+}
+.button{
+    background-color: #1d7044;
+    color: #fff;
+    padding: 0.62rem 1.25rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover{
+    background-color: #114b2c;
+    color: #fff;
+    transform: scale(1.02);
+}
+
+.petDetalhe{
+    margin-top: 5rem;
+    background-color: #cdeec7;
+    width: 20vw;
+    margin-bottom: 20px;
+    margin-right: 1rem;
+    height:  40vh;
+    box-shadow: 5px 10px 15px #1d7044;
+}
+
+#containerLista{
+    flex-direction: column; 
+}
+
+.hidden{
+    display: none;
+}
