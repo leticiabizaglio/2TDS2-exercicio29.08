@@ -69,12 +69,14 @@ function cadastrar() {
     let especie = document.getElementById("input-especie").value;
     let imgLink = document.getElementById("input-imgLink").value;
     let nascimento = document.getElementById("input-nascimento").value;
+    let datacorreta = nascimento.split('-');
+    let datainvert = datacorreta.reverse().join('/');
+   
 
     const pet = new Pets(tutor, name, especie, imgLink, nascimento);
     console.log(pet);
     bibliotecaPets.add(pet);
-    limparInputs();
-    renderizarConteudo();
+
 }
 class ListaPets {
     constructor() {
@@ -98,26 +100,26 @@ console.log(bibliotecaPets);
 function limparInputs() {
     console.log("Passou pela função limparInputs!");
 
-    tutor = document.getElementById("input-tutor").value = '';
-    name = document.getElementById("input-name").value = '';
-    especie = document.getElementById("input-especie").value = '';
-    imgLink = document.getElementById("input-imgLink").value = '';
-    nascimento = document.getElementById("input-nascimento").value = '';
+     document.getElementById("input-tutor").value = '';
+    document.getElementById("input-name").value = '';
+   document.getElementById("input-especie").value = '';
+    document.getElementById("input-imgLink").value = '';
+    document.getElementById("input-nascimento").value = '';
 }
 
 function renderizarConteudo() {
-    document.getElementById("container").classList.add("hidden");
-    document.getElementById("containerLista").classList.remove("hidden")
+    
+
     const listaHTML = document.getElementById('containerLista');
     listaHTML.innerHTML = '';
 
-
+    let petDiv = '';
     let array = bibliotecaPets.listPets;
 
     console.log(array);
     array.forEach(pet => {
 
-        const petDiv = `
+        petDiv = `
             <div class='petDetalhe'>
             <img src="${pet.imgLink}" alt="${pet.tutor}">
                 <h2>Tutor: ${pet.tutor}</h2>
@@ -130,4 +132,14 @@ function renderizarConteudo() {
 
         listaHTML.innerHTML += petDiv;
     });
+}
+function voltinha2(){
+    document.getElementById("container").classList.add("hidden");
+    document.getElementById("containerLista").classList.remove("hidden");
+    renderizarConteudo();
+}
+function voltinha() {
+    document.getElementById("container").classList.remove("hidden");
+    document.getElementById("containerLista").classList.add("hidden");
+    renderizarConteudo();
 }
